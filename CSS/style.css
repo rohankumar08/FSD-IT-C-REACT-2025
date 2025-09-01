@@ -1,0 +1,35 @@
+/* body{
+    background-color: yellowgreen;
+}
+ h2{
+    color: blueviolet;
+    background-color: black;
+ }
+ #head-3{
+    color: blue;
+ } */
+
+ div~p{
+    background-color: aqua;
+    color: bisque;
+ }
+ p:hover{
+    background-color: aquamarine;
+    font-style: italic;
+    color: blueviolet;
+ }
+
+ p::after{
+    content:"react developer";
+    background-color: aquamarine;
+ }
+
+ p::selection{
+    background-color: chartreuse;
+ }
+ p:nth-child(2){
+  background-color: black;  
+ }
+ div p:nth-of-type(1){
+    
+ }
