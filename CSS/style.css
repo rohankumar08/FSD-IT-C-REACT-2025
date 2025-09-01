@@ -12,7 +12,6 @@
  div~p{
     background-color: aqua;
     color: bisque;
-    border: 5px;
  }
  p:hover{
     background-color: aquamarine;
