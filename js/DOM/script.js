@@ -4,36 +4,36 @@
 // div[0].style.Color="green"
 // console.log(div)
 
-const container=document.getElementsByClassName("container")
+// const container=document.getElementsByClassName("container")
 // console.dir(container)
 // container[0].innerHTML='<h2 style=color:red>HElloo world</h2>'
 
 
-const h2=document.createElement('h2')
-h2.innerText='ABES'
-h2.style.backgroundColor="#212121"
-h2.style.color="#fff"
-container[0].appendChild(h2)
+// const h2=document.createElement('h2')
+// h2.innerText='ABES'
+// h2.style.backgroundColor="#212121"
+// h2.style.color="#fff"
+// container[0].appendChild(h2)
 
-const img=document.createElement('img')
-img.src="https://img.static-af.com/transform/45cb9a13-b167-4842-8ea8-05d0cc7a4d04/"
-img.setAttribute('height','200px')
-img.setAttribute('width','200px')
-container[0].appendChild(img)
+// const img=document.createElement('img')
+// img.src="https://img.static-af.com/transform/45cb9a13-b167-4842-8ea8-05d0cc7a4d04/"
+// img.setAttribute('height','200px')
+// img.setAttribute('width','200px')
+// container[0].appendChild(img)
 
- const button=document.getElementById('btn')
- document.getElementById('disp').innerText="Loading image........"
- button.addEventListener('click',function(){
-    const pic=document.createElement('img')
-    pic.src="https://content.r9cdn.net/rimg/dimg/e7/e2/a092e93b-city-13998-1641eaba8a3.jpg?width=1366&height=768&xhint=1016&yhint=1024&crop=true"
-    pic.setAttribute('height',"200px")
-     pic.setAttribute('width',"200px")
+//  const button=document.getElementById('btn')
+//  document.getElementById('disp').innerText="Loading image........"
+//  button.addEventListener('click',function(){
+//     const pic=document.createElement('img')
+//     pic.src="https://content.r9cdn.net/rimg/dimg/e7/e2/a092e93b-city-13998-1641eaba8a3.jpg?width=1366&height=768&xhint=1016&yhint=1024&crop=true"
+//     pic.setAttribute('height',"200px")
+//      pic.setAttribute('width',"200px")
 
-     document.getElementById('disp').appendChild(pic)
-      const button=document.getElementById('btn')
+//      document.getElementById('disp').appendChild(pic)
+//       const button=document.getElementById('btn')
 
 
- })
+//  })
 // function msg(){
 //     // return "hello , i am working on DOM"
 //     // alert('hi i am using dom')    
@@ -45,3 +45,70 @@ container[0].appendChild(img)
 //     container[0].appendChild(name)
 // }
 // button.addEventListener('click',msg)    
+
+//***************************************************************************************************************************************** */
+
+// console.log and for loop is blocking code
+ 
+// const button=document.getElementById('btn')
+// function longData(){
+//    console.log("start")
+//    for(let i=0;i<10000000;i++){
+//       console.log(i)
+//    }
+//    console.log('end')
+// }
+
+// button.addEventListener('click',longData)
+
+
+// console.log('start')
+// setTimeout(function(){   // settimeout is a nonBlocking code
+//    console.log('Welcome to fsd')
+// },2000)
+// console.log('end')
+
+
+//****************************************************CALL BACK FUNCTION******************************* */
+
+// function msg(myname){
+//     return "Hii"+" "+myname+" "+"Welcome";
+// }
+// function msgHandler(msg,clbk){
+//     // console.log(msg);
+//     const data=clbk(msg);
+//     return data;
+
+// }
+// const student=["rahul","aman","vansh"];
+// student.forEach((name)=>{
+//     console.log(msgHandler(name,msg));
+
+
+// })
+// const c=msgHandler("Hii",msg);
+// console.log(c);
+
+
+
+//**********************************************************PROMISE********************************************** */
+
+const myPromise=new Promise(function(resolve,reject){
+   const password="98765fghjbvc"
+   if(password.length>8){
+      resolve("Password length is ok")
+   }
+   else 
+      reject("password length is not as our policy")
+});
+
+// myPromise
+// .then(function(result){console.log(result)})
+// .catch(function(error){console.log(error)})
+// .finally(function(){console.log("All the resource have closed")})
+
+async function handleData(){
+     console.log(await myPromise)
+
+}
+handleData()
