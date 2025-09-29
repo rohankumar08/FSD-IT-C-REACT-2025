@@ -93,22 +93,77 @@
 
 //**********************************************************PROMISE********************************************** */
 
-const myPromise=new Promise(function(resolve,reject){
-   const password="98765fghjbvc"
-   if(password.length>8){
-      resolve("Password length is ok")
-   }
-   else 
-      reject("password length is not as our policy")
-});
+// const myPromise=new Promise(function(resolve,reject){
+//    const password="98765fghjbvc"
+//    if(password.length>8){
+//       resolve("Password length is ok")
+//    }
+//    else 
+//       reject("password length is not as our policy")
+// });
 
-// myPromise
-// .then(function(result){console.log(result)})
-// .catch(function(error){console.log(error)})
-// .finally(function(){console.log("All the resource have closed")})
+// // myPromise
+// // .then(function(result){console.log(result)})
+// // .catch(function(error){console.log(error)})
+// // .finally(function(){console.log("All the resource have closed")})
 
-async function handleData(){
-     console.log(await myPromise)
+// async function handleData(){
+//      console.log(await myPromise)
 
+// }
+// handleData()
+
+
+
+//*********************************FETCHED API********************************* */
+// const button=document.getElementById('btn')
+// const disp=document.getElementById('disp')
+// disp.style.backgroundColor="lightyellow"
+// disp.style.padding="40px"
+// let table='<table border=1  >'
+//  async function fetchedData(){
+//    disp.innerHTML="<h2>data id loading............</h2>"
+//    const response= await fetch('https://dummyjson.com/recipes')
+//    const jsonnData= await response.json()
+//    console.log(jsonnData.recipes)
+//    // disp.innerHTML=`<h2>${jsonnData.recipes[0].id}${jsonnData.recipes[0].name} </h2> <img src="${jsonnData.recipes[0].image}" height="200px/>`
+//    jsonnData.recipes.forEach(element => {
+//       table+=`<tr>
+//          <td>${element.id}</td>
+//          <td><img src=${element.image} height=200 width=200 > </td>
+//          <td>${element.name}</td>
+//          <td>${element.ingredients}</td>
+//       </tr>`
+//    });
+
+//    table+='</table>'
+//    disp.innerHTML=table
+// }
+
+// button.addEventListener('click',fetchedData)
+
+const button=document.getElementById('btn')
+const disp=document.getElementById('disp')
+disp.style.backgroundColor="lightyellow"
+disp.style.padding="40px"
+let table='<table border=1  >'
+ async function fetchedData(){
+   disp.innerHTML="<h2>data id loading............</h2>"
+   const response= await fetch('https://dummyjson.com/users')
+   const jsonnData= await response.json()
+   console.log(jsonnData.users)
+   // disp.innerHTML=`<h2>${jsonnData.recipes[0].id}${jsonnData.recipes[0].name} </h2> <img src="${jsonnData.recipes[0].image}" height="200px/>`
+   jsonnData.users.forEach(element => {
+      table+=`<tr>
+         <td>${element.id}</td>
+         <td><img src=${element.image} height=200 width=200 > </td>
+         <td>${element.firstName}</td>
+         <td>${element.lastName}</td>
+      </tr>`
+   });
+
+   table+='</table>'
+   disp.innerHTML=table
 }
-handleData()
+
+button.addEventListener('click',fetchedData)
