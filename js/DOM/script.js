@@ -159,6 +159,14 @@ let table='<table border=1  >'
          <td><img src=${element.image} height=200 width=200 > </td>
          <td>${element.firstName}</td>
          <td>${element.lastName}</td>
+         <td>${element.age}</td>
+         <td>${element.gender}</td>
+         <td>${element.phone}</td>
+         <td>${element.email}</td>
+         <td>${element.username}</td>
+         <td>${element.password}</td>
+         <td>${element.birthDate}</td>
+         <td>${element.bloodGroup}</td>
       </tr>`
    });
 
