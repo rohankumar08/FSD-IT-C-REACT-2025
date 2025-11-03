@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Profile from './component/Profile'
 import Gallary from './component/Gallary'
+import StateHandling from './component/StateHandling'
+import ImageManipulation from './component/ImageManipulation'
 
 function App() {
   
@@ -16,7 +18,10 @@ function App() {
         <Profile/>
       </h3> */}
 
-      <Gallary/>
+      {/* <Gallary/> */}
+      {/* <StateHandling/> */}
+      
+      <ImageManipulation/>
      
      </div>
     </>
